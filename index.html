@@ -13,7 +13,7 @@
             font-family: "Times New Roman", "SimSun", serif;
         }
 
-    /* 背景图片设置 - 核心新增样式 */
+        /* 背景图片设置 - 核心样式 */
         body {
             max-width: 1000px;
             margin: 40px auto;
@@ -21,26 +21,23 @@
             line-height: 1.65;
             color: #333;
             font-size: 16px;
-            /* 背景图片核心样式 */
-           background-image: url("3.png");
-            background-size: cover; /* 图片自适应覆盖整个屏幕 */
-            background-position: center; /* 图片居中显示 */
-            background-attachment: fixed; /* 滚动时背景固定 */
-            background-repeat: no-repeat; /* 不重复 */
-            background-opacity: 0.9; /* 背景图片透明度（低透明度不干扰文字） */
+            /* 背景图片：指向仓库里的本地图片 */
+            background-image: url("3.png"); 
+            background-size: cover; 
+            background-position: center; 
+            background-attachment: fixed; 
+            background-repeat: no-repeat; 
         }
 
-        /* 内容容器 - 新增：白色背景遮罩，保证文字清晰 */
+        /* 内容容器 - 白色更明显 */
         .content-container {
-            background-color: rgba(255, 255, 255, 0.85); /* 白色半透明遮罩 */
+            background-color: rgba(255, 255, 255, 0.9); /* 关键修改：0.9让白色更突出 */
             padding: 40px;
             border-radius: 4px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* 轻微阴影增强层次感 */
-            position: relative;
-            z-index: 1; /* 强制在背景之上 */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
         }
 
-        /* 导航栏样式 */
+
         nav {
             margin: 30px 0 40px;
             border-bottom: 1px solid #eee;
@@ -126,10 +123,12 @@
                 font-size: 16px;
             }
         }
+        /* 其余样式和之前一致，无需修改 */
     </style>
 </head>
 <body>
-    <!-- 导航栏 - 包含所有锚点链接 -->
+    <div class="content-container">
+            <!-- 导航栏 - 包含所有锚点链接 -->
     <nav>
         <a href="#home">Home</a>
         <a href="#interest">Interest</a>
@@ -161,4 +160,6 @@
         <h2>联系方式 / Contact</h2>
         <p>邮箱 / Email：Shanjin_172@outlook.com</p>
         <p>微信 / WeChat：ShanjinYa_</p>
+    </div>
+</body>
 </html>
