@@ -1,0 +1,28 @@
+name: generate site with gitlyte
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: write
+  pull-requests: write
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: generate site
+        uses: wada-katu/gitlyte@v1
+        with:
+          api-key: ${{ secrets.OPENAI_API_KEY }} # 可替换为anthropic_api_key/google_api_key
+          provider: openai # AI服务商：openai/anthropic/google，和api-key对应
+          quality: standard
+          output-directory: docs
+          site-instructions: 生成学术个人主页，包含个人介绍、研究方向、出版物、教学经历、联系方式，添加导航锚点（#publications/#research/#contact），参考极简学术风格，中英文双语展示
+      - name: commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/
+          git diff --staged --quiet || git commit -m "chore: update ai generated academic site"
+          git push
