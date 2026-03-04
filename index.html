@@ -102,6 +102,15 @@
             text-decoration: underline;
         }
 
+        /* 最后更新日期样式（极简风格，和整体统一） */
+        .last-updated {
+            margin-top: 60px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            color: #666;
+            font-size: 15px;
+        }
+        
         /* 响应式适配 - 手机端优化 */
         @media (max-width: 768px) {
             body {
@@ -161,5 +170,23 @@
         <p>邮箱 / Email：Shanjin_172@outlook.com</p>
         <p>微信 / WeChat：ShanjinYa_</p>
     </div>
+
+                <!-- 方式2：自动获取最后修改时间（推荐，无需手动改） -->
+            最后更新日期 / Last Updated：<span id="updateDate"></span>
+        </div>
+    </div>
+
+    <!-- 自动获取更新时间的JS（极简，不影响页面加载） -->
+    <script>
+        // 获取HTML文件的最后修改时间，格式化为YYYY-MM-DD
+        function getLastUpdatedDate() {
+            const lastModified = new Date(document.lastModified);
+            const year = lastModified.getFullYear();
+            const month = String(lastModified.getMonth() + 1).padStart(2, '0');
+            const day = String(lastModified.getDate()).padStart(2, '0');
+            return `${year}-${month}-${day}`;
+        }
+        // 显示到页面
+        document.getElementById('updateDate').textContent = getLastUpdatedDate();
 </body>
 </html>
