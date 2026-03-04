@@ -13,6 +13,7 @@
             font-family: "Times New Roman", "SimSun", serif;
         }
 
+    /* 背景图片设置 - 核心新增样式 */
         body {
             max-width: 1000px;
             margin: 40px auto;
@@ -20,7 +21,21 @@
             line-height: 1.65;
             color: #333;
             font-size: 16px;
-            background-color: #fff;
+            /* 背景图片核心样式 */
+           background-image: url("3.png");
+            background-size: cover; /* 图片自适应覆盖整个屏幕 */
+            background-position: center; /* 图片居中显示 */
+            background-attachment: fixed; /* 滚动时背景固定 */
+            background-repeat: no-repeat; /* 不重复 */
+            background-opacity: 0.3; /* 背景图片透明度（低透明度不干扰文字） */
+        }
+
+        /* 内容容器 - 新增：白色背景遮罩，保证文字清晰 */
+        .content-container {
+            background-color: rgba(255, 255, 255, 0.95); /* 白色半透明遮罩 */
+            padding: 40px;
+            border-radius: 4px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* 轻微阴影增强层次感 */
         }
 
         /* 导航栏样式 */
