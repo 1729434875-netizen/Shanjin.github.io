@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人学术主页</title>
+    <style>
+        /* 全局样式 - 极简黑白灰风格 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Times New Roman", "SimSun", serif;
+        }
+
+        body {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+            line-height: 1.65;
+            color: #333;
+            font-size: 16px;
+            background-color: #fff;
+        }
+
+        /* 导航栏样式 */
+        nav {
+            margin: 30px 0 40px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 15px;
+        }
+
+        nav a {
+            margin-right: 25px;
+            font-size: 18px;
+            color: #333;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+            text-underline-offset: 4px;
+        }
+
+        /* 标题样式 */
+        h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+            font-weight: normal;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin: 40px 0 20px;
+            font-weight: normal;
+            border-left: 4px solid #333;
+            padding-left: 10px;
+        }
+
+        /* 段落和列表样式 */
+        p, li {
+            margin: 12px 0;
+        }
+
+        /* 部分通用样式 */
+        .section {
+            margin: 50px 0;
+        }
+
+        .sub-title {
+            color: #666;
+            font-size: 17px;
+            margin-bottom: 20px;
+        }
+
+        /* 出版物样式 */
+        .publication {
+            margin: 18px 0;
+            padding-left: 5px;
+        }
+
+        .doi-link {
+            color: #0066cc;
+            text-decoration: none;
+        }
+
+        .doi-link:hover {
+            text-decoration: underline;
+        }
+
+        /* 响应式适配 - 手机端优化 */
+        @media (max-width: 768px) {
+            body {
+                margin: 20px auto;
+                padding: 0 15px;
+                font-size: 15px;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            h2 {
+                font-size: 22px;
+            }
+
+            nav a {
+                margin-right: 15px;
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 - 包含所有锚点链接 -->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#interest">Interest</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- 个人介绍模块 -->
+    <div id="home" class="section">
+        <h1>郭芮含 / Tracy</h1>
+        <p class="sub-title">本科生在读 / Associate Professor |华东政法大学商学院 / School of Business, East China University Of Political Science And Law</p>
+        <p><strong>个人简介 / Biography：</strong></p>
+        <p>华东政法大学金融学专业在读学生，具备扎实专业基础。在校任职社团社长，锻炼了沟通协调与组织能力，做事认真负责，有较强的学习能力和抗压能力。</p>
+      
+    <!-- 研究方向模块 -->
+    <div id="interest" classi="section">
+        <h2>兴趣方向 / Interests</h2>
+        <ul>
+            <li>热爱汉服文化 / Passionate about Hanfu culture</li>
+            <li>深耕中华传统文化 / Deeply explore traditional Chinese culture</li>
+            <li>关注金融市场动态 / Follow the dynamics of the financial market</li>
+            <li>研习经济领域知识 / Study knowledge in the economic field</li>
+        </ul>
+    i</div>
+
+
+   
+    <!-- 联系方式模块 -->
+    <div id="contact" class="section">
+        <h2>联系方式 / Contact</h2>
+        <p>邮箱 / Email：Shanjin_172@outlook.com</p>
+        <p>ORCID：<a href="https://orcid.org/0000-0000-0000-0000" class="doi-link" target="_blank">0000-0000-0000-0000</a></p>
+        <p>ResearchGate：<a href="https://www.researchgate.net/profile/Zhang-San" class="doi-link" target="_blank">https://www.researchgate.net/profile/Zhang-San</a></p>
+    </div>
+</body>
+</html>
